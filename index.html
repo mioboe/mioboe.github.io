@@ -2,31 +2,56 @@
 <html lang="en">
 
 <!-- (-_-) -->
-	
+
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="Author" content="Kristian Laudrup">
-	<meta name="Description" content="Kristian Laudrup, graphic design, photography, digital imaging">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Kristian Laudrup">
+	<meta name="description" content="Kristian Laudrup, graphic design, photography, digital imaging">
 
-	<link rel="icon" type="img/ico" href="img/icon.ico">
-	
 	<title>kristian laudrup</title>
+
+	<link rel="icon" type="img/ico" href="images/icon.ico">
 
 	<style>
 
-	.full {
-	background: url(images/99870035W.jpg) no-repeat center top fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	}	
+	.wrapper {
+		height: 100vh;
+		width: 100vw;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-attachment: fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
 
 	</style>
+
 </head>
 
-<body class="full">
+<body style="margin: 0;">
+
+	<div id="image" class="wrapper" style="background-image: url(img/Kristian_Laudrup_2018_001.jpg);"></div>
+
+	<!-- Javascript -->
+	<script>
+
+	// select random image //
+	var randomImageArray = ['Kristian_Laudrup_2018_001.jpg', 'Kristian_Laudrup_2018_002.jpg', 'Kristian_Laudrup_2018_003.jpg', 'Kristian_Laudrup_2018_004.jpg'];
+
+	function getRandomImage(imgAr, path) {
+		path = path || 'img/';
+		var num = Math.floor( Math.random() * imgAr.length );
+		var img = imgAr[ num ];
+		var imgString = "url('" + path + img + "')";
+		return imgString;
+	};
+
+	document.querySelector("#image").style.backgroundImage = getRandomImage(randomImageArray);
+
+	</script>
 
 </body>
 
