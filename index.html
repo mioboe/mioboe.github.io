@@ -33,7 +33,7 @@
 
 <body style="margin: 0;">
 
-	<div id="image" class="wrapper" style="background-image: url(img/Kristian_Laudrup_2018_001.jpg);"></div>
+	<div id="image" class="wrapper" style="background-image: url(images/Kristian_Laudrup_2018_001.jpg);"></div>
 
 	<!-- Javascript -->
 	<script>
@@ -42,7 +42,7 @@
 	var randomImageArray = ['Kristian_Laudrup_2018_001.jpg', 'Kristian_Laudrup_2018_002.jpg', 'Kristian_Laudrup_2018_003.jpg', 'Kristian_Laudrup_2018_004.jpg'];
 
 	function getRandomImage(imgAr, path) {
-		path = path || 'img/';
+		path = path || 'images/';
 		var num = Math.floor( Math.random() * imgAr.length );
 		var img = imgAr[ num ];
 		var imgString = "url('" + path + img + "')";
